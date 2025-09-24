@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/test-utils',
+    '@nuxtjs/color-mode',
   ],
   vite: {
     plugins: [tailwindcss()],
@@ -19,5 +20,9 @@ export default defineNuxtConfig({
     config: {
       standalone: false, // <---
     },
+  },
+  colorMode: {
+    /** Modify `data-theme` attribute on root html element */
+    dataValue: 'theme',
   },
 });

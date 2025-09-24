@@ -7,8 +7,8 @@
       </nuxt-link>
     </div>
     <div class="navbar-end">
-      <!-- <AppThemeToggle />
-      <AuthButton /> -->
+      <AppThemeToggle />
+      <!-- <AuthButton /> -->
     </div>
   </header>
 </template>
