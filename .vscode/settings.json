@@ -1,0 +1,9 @@
+{
+	"editor.formatOnSave": true,
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+
+	// tailwind plugin targeting
+	"tailwindCSS.experimental.configFile": "./app/assets/css/main.css"
+}
