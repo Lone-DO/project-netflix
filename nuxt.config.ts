@@ -15,4 +15,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  eslint: {
+    config: {
+      standalone: false, // <---
+    },
+  },
 })
