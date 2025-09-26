@@ -9,8 +9,7 @@ const $props = defineProps<{
 }>();
 
 const isHovered = ref(false);
-const imgSrc = await import(`@/assets/images/profile/${$props.icon}.svg`);
-const classes = computed(() => (isHovered.value) ? 'border-white border-2' : '');
+const imgSrc = await import(`@/assets/images/profile/${$props.icon}.webp`);
 const to = computed<RouteLocationRaw>(() => ({
   name: 'SwitchProfile-id',
   params: {
@@ -39,10 +38,10 @@ const to = computed<RouteLocationRaw>(() => ({
       <img
         :src="imgSrc.default"
         :alt="`${name} icon`"
-        :class="classes"
+        :class="isHovered ? 'border-white border-2' : ''"
         class="w-21 rounded-sm"
       >
-      <i class="text-xs">{{ name }}</i>
+      <i class="text-xs" :class="isHovered ? 'text-white' : ''">{{ name }}</i>
       <Icon
         v-if="requiresAuth"
         name="majesticons:lock-line"
