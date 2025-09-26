@@ -9,12 +9,12 @@ const profiles = [
 </script>
 
 <template>
-  <section id="profiles-list" class="flex flex-col items-center justify-center gap-4 min-w-screen">
+  <section id="profiles-list" class="flex flex-col items-center justify-center gap-4 min-w-screen text-center">
     <!-- TODO: Insert transition fade upon loading profile -->
     <h1 class="text-3xl">
       Who's watching?
     </h1>
-    <ul class="flex justify-center items-start gap-2.5">
+    <ul class="flex justify-center flex-wrap items-start gap-2.5">
       <li v-for="profile in profiles" :key="profile.id">
         <AppProfile v-bind="profile" />
       </li>
