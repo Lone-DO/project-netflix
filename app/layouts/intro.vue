@@ -1,6 +1,8 @@
 <template>
-  <div class="flex min-h-screen flex-col">
-    <p>INTRO</p>
-    <!-- INSERT NETFLIX INTRO ANIMATION WITH PERSONAL NAME -->
-  </div>
+  <NuxtPage>
+    <main id="intro" class="flex min-h-screen ">
+      <!-- INSERT NETFLIX INTRO ANIMATION WITH PERSONAL NAME -->
+      <AppProfileList />
+    </main>
+  </NuxtPage>
 </template>
