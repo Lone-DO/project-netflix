@@ -28,8 +28,16 @@ function clear() {
 </script>
 
 <template>
-  <section id="SwitchProfile-id" class="relative">
-    <img :src="appStore.imgSource" :alt="String($route.params.id)">
-    <!-- <Icon /> -->
+  <section id="SwitchProfile-id" class="flex justify-center items-center relative w-40 h-40">
+    <img
+      class="w-15"
+      :src="appStore.imgSource"
+      :alt="String($route.params.id)"
+    >
+    <img
+      class="w-30 animate-spin absolute top-1/7"
+      src="@/assets/images/spinner.png"
+      alt="loading image"
+    >
   </section>
 </template>
