@@ -11,6 +11,8 @@ export default defineNuxtConfig({
       },
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   colorMode: {
     /** Modify `data-theme` attribute on root html element */
@@ -31,6 +33,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils',
     '@nuxtjs/color-mode',
+    '@pinia/nuxt',
   ],
   typescript: {
     typeCheck: true,
