@@ -19,8 +19,19 @@ export const useAppStore = defineStore('appStore', () => {
     }
     isMounted.value = true;
   });
+
+  function reset() {
+    /**
+     * Global Reset handler
+     * TODO: Integrate future store clearing logic here
+     * Called when user loads root `/` page
+     */
+    imgSource.value = null;
+    profile.value = null;
+  }
   return {
     imgSource,
     profile,
+    reset,
   };
 });
