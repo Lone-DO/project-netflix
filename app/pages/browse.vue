@@ -3,8 +3,11 @@ const appStore = useAppStore();
 </script>
 
 <template>
-  <AppProfileList v-if="!appStore.profile" />
-  <AppContent v-else-if="appStore.profile" />
+  <section id="browse" class="flex flex-col items-center justify-center gap-4 min-w-screen text-center">
+    <!-- TODO: Add fallback element till app is ready -->
+    <AppProfileList v-if="!appStore.profile" />
+    <AppContent v-else-if="appStore.profile" />
+  </section>
 </template>
 
 <style scoped>
