@@ -8,12 +8,16 @@ const $props = defineProps<{
   requiresAuth?: boolean;
 }>();
 
+const appStore = useAppStore();
 const isHovered = ref(false);
 const imgSrc = await import(`@/assets/images/profile/${$props.icon}.webp`);
 const to = computed<RouteLocationRaw>(() => ({
   name: 'SwitchProfile-id',
   params: {
     id: $props.id,
+  },
+  query: {
+    requiresAuth: $props.requiresAuth ? 'true' : undefined,
   },
 }));
 </script>
@@ -34,6 +38,7 @@ const to = computed<RouteLocationRaw>(() => ({
       @blur="isHovered = false"
       @mouseenter="isHovered = true"
       @mouseleave="isHovered = false"
+      @click="appStore.imgSource = imgSrc.default"
     >
       <img
         :src="imgSrc.default"
