@@ -40,7 +40,9 @@ function proceed() {
 
 <template>
   <section id="SwitchProfile-id" class="flex justify-center items-center relative w-40 h-40">
+    <i v-if="!appStore.imgSource" class="w-15 h-15 skeleton" />
     <img
+      v-if="appStore.imgSource"
       class="w-15"
       :src="appStore.imgSource"
       :alt="String($route.params.id)"
