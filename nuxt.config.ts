@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
+    '@vee-validate/nuxt',
   ],
   typescript: {
     typeCheck: true,
