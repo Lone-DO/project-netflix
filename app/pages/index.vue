@@ -5,6 +5,7 @@ definePageMeta({
 const hasStarted = ref(false);
 const debounce = ref<number>();
 const transition = ref<number>();
+const appStore = useAppStore();
 const playerStore = usePlayerStore();
 function start() {
   if (!hasStarted.value) {
@@ -20,6 +21,9 @@ function cleanup() {
   clearTimeout(debounce.value);
   clearTimeout(transition.value);
 }
+
+onMounted(() => appStore.reset());
+
 onUnmounted(cleanup);
 </script>
 
@@ -32,7 +36,7 @@ onUnmounted(cleanup);
     <img
       alt="Dayshawn Losovoj"
       src="@/assets/images/logo.svg"
-      class="transform transition opacity duration-6000 ease-in-out"
+      class="transform transition opacity duration-2600 ease-in-out"
       :class="{ 'scale-100': !hasStarted, 'scale-800': hasStarted, 'opacity-100': !hasStarted, 'opacity-0': hasStarted }"
     >
   </section>
