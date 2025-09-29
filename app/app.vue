@@ -1,5 +1,5 @@
 <script lang='ts' setup>
-import audio from '@/assets/audio/netflix.mp3';
+import audioSrc from '@/assets/audio/netflix.mp3';
 
 const player = useTemplateRef('player');
 const playerStore = usePlayerStore();
@@ -7,9 +7,9 @@ onMounted(() => playerStore.element = player.value);
 </script>
 
 <template>
+  <audio ref="player" :src="audioSrc" />
   <NuxtLayout>
     <NuxtPage />
-    <audio ref="player" :src="audio" />
   </NuxtLayout>
 </template>
 
