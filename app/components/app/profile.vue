@@ -33,6 +33,7 @@ const to = computed<RouteLocationRaw>(() => ({
     <!-- TODO: Insert transition fade upon loading profile -->
     <NuxtLink
       :to
+      replace
       class="app-profile flex flex-col min-w-21 justify-center items-center text-neutral-500 hover:text-white gap-2"
       @focus="isHovered = true"
       @blur="isHovered = false"

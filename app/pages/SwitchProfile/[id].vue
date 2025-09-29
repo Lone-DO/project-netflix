@@ -6,24 +6,35 @@ definePageMeta({
 });
 const $route = useRoute();
 const appStore = useAppStore();
+const requiresAuth = ref(false);
+const hasValidPinCode = ref(false);
 const debounce = ref<number | null>(null);
+const profile = computed(() => PROFILES.find(item => item.id === $route.params.id));
 
 onMounted(async () => {
-  const profile = PROFILES.find(item => item.id === $route.params.id);
-  if (!$route.params.id || !profile || !appStore.imgSource) {
-    clear();
+  if (!$route.params.id || !profile.value || !appStore.imgSource) {
+    return reject();
   }
-  else {
-    debounce.value = setTimeout(() => {
-      appStore.profile = profile;
-      navigateTo('/browse');
-    }, 2000);
+  if (profile.value?.requiresAuth) {
+    requiresAuth.value = true;
+    return null;
   }
+  return proceed();
 });
 
-function clear() {
+function reject() {
+  if (hasValidPinCode.value) {
+    return;
+  }
   appStore.profile = null;
-  navigateTo('/browse');
+  return navigateTo('/browse');
+}
+
+function proceed() {
+  debounce.value = setTimeout(() => {
+    appStore.profile = profile.value || null;
+    navigateTo('/browse');
+  }, 2000);
 }
 </script>
 
@@ -39,5 +50,11 @@ function clear() {
       src="@/assets/images/spinner.png"
       alt="loading image"
     >
+    <AuthDialog
+      v-if="requiresAuth"
+      :is-open="requiresAuth"
+      @on-valid="hasValidPinCode = true"
+      @on-closed="reject"
+    />
   </section>
 </template>
