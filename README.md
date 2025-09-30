@@ -36,6 +36,10 @@ Locally preview production build:
 pnpm preview
 ```
 
+# References
+
+- [Figma](https://www.figma.com/design/KfxFOu4ZogVfhE2rKZHtNK/Netflix-Design-System-2024--Website-ver.--%F0%9F%8E%A5--Community-?node-id=202-17497&t=v6zaK9JWF6g4sLng-0)
+
 # Dependencies
 
 ## Nuxt Plugins
