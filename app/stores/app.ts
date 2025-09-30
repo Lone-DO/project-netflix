@@ -21,12 +21,20 @@ export const useAppStore = defineStore('appStore', () => {
    * Prevents initial page load from having incorrect icons
    */
   /** PROFILE */
-  const imgSource = ref<any>(null);
   const isMounted = ref(false);
   const profile = ref<PROFILE | null>(null);
+  const imgSource = ref<any>(null);
+  async function syncImageSource() {
+    if (!profile.value?.icon) {
+      imgSource.value = '';
+    }
+    const src = await import(`@/assets/images/profile/${profile.value?.icon}.webp`);
+    imgSource.value = src.default;
+  }
   watch(profile, (item) => {
     try {
       localStorage.setItem('profile', JSON.stringify(item));
+      syncImageSource();
     }
     catch (error) {
       console.error(error);
@@ -47,7 +55,6 @@ export const useAppStore = defineStore('appStore', () => {
      * TODO: Integrate future store clearing logic here
      * Called when user loads root `/` page
      */
-    imgSource.value = null;
     profile.value = null;
   }
   return {

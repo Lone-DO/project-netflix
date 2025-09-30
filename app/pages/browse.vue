@@ -5,7 +5,12 @@ const appStore = useAppStore();
 <template>
   <section id="browse" class="flex flex-col items-center justify-center gap-4 min-w-screen text-center">
     <!-- TODO: Add fallback element till app is ready -->
-    <AppProfileList v-if="!appStore.profile" />
+    <template v-if="!appStore.profile">
+      <h1 class="text-3xl">
+        Who's watching?
+      </h1>
+      <AppProfileList />
+    </template>
     <AppContent v-else-if="appStore.profile" />
   </section>
 </template>

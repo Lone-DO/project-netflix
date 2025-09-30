@@ -8,6 +8,16 @@ export const PROFILES: PROFILE[] = [
   { id: 'admin', icon: '133', name: 'Admin', requiresAuth: true },
 ];
 
+export const USER_ITEMS: DropdownItem[] = [
+  {
+    icon: 'share',
+    label: 'Exit Profile',
+    classes: 'p-1',
+    to: '/Signout',
+  },
+
+];
+
 export const NAVIGATION_ITEMS: DropdownItem[] = [
   {
     icon: 'home',
@@ -57,6 +67,8 @@ export const LIGHT_MODE_ICONS: Icons = {
   'hire': 'majesticons:paper-airplane',
   'chevron-up': 'majesticons:chevron-up-circle',
   'chevron-down': 'majesticons:chevron-down-circle',
+  'share': 'fluent:share-16-filled',
+  'gear': 'majesticons:settings-cog',
 };
 export const DARK_MODE_ICONS: Icons = {
   'home': 'material-symbols:house-outline',
@@ -69,4 +81,6 @@ export const DARK_MODE_ICONS: Icons = {
   'hire': 'majesticons:paper-airplane-line',
   'chevron-up': 'majesticons:chevron-up-circle-line',
   'chevron-down': 'majesticons:chevron-down-circle-line',
+  'share': 'fluent:share-16-regular',
+  'gear': 'majesticons:settings-cog-line',
 };

@@ -11,6 +11,7 @@ export type DropdownItem = {
   icon: string;
   label: string;
   to?: RouteLocationRaw;
+  classes?: string;
   size?: string;
   onClick?: () => any;
 };
@@ -24,6 +25,8 @@ export type Icons = {
   'human': string;
   'about': string;
   'hire': string;
+  'share': string;
+  'gear': string;
   'chevron-up': string;
   'chevron-down': string;
   // navToggle: {
