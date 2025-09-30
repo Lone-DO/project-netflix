@@ -10,7 +10,6 @@ const appStore = useAppStore();
     class="dropdown-end"
     list-classes="p-0"
     open-by="hover"
-    :open="true"
   >
     <template #default>
       <i v-if="!appStore.imgSource" class="skeleton w-8 h-8" />
