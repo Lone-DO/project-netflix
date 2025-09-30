@@ -39,11 +39,11 @@ export const NAVIGATION_ITEMS: DropdownItem[] = [
     label: 'About',
     to: '/about',
   },
-  {
-    icon: 'hire',
-    label: 'Hire Me',
-    to: '/hire',
-  },
+  // {
+  //   icon: 'hire',
+  //   label: 'Hire Me',
+  //   to: '/hire',
+  // },
 ];
 
 export const LIGHT_MODE_ICONS: Icons = {
