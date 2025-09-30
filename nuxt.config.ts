@@ -37,7 +37,11 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
   ],
   typescript: {
-    typeCheck: true,
+    /**
+     * MUST DISABLE typecheck, BLOCKS HMR FLOW
+     * https://github.com/nuxt/nuxt/issues/32564#issuecomment-3313960055
+     */
+    typeCheck: false,
   },
   vite: {
     plugins: [tailwindcss()],

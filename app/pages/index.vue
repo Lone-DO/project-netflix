@@ -33,11 +33,8 @@ onUnmounted(cleanup);
     class="cursor-pointer p-4"
     @click="start"
   >
-    <img
-      alt="Dayshawn Losovoj"
-      src="@/assets/images/logo.svg"
-      class="transform transition opacity duration-2600 ease-in-out"
+    <AppLogo
       :class="{ 'scale-100': !hasStarted, 'scale-800': hasStarted, 'opacity-100': !hasStarted, 'opacity-0': hasStarted }"
-    >
+    />
   </section>
 </template>
