@@ -12,7 +12,8 @@ const isToggled = computed({
 </script>
 
 <template>
-  <label id="app-theme-toggle" class="swap swap-rotate mx-4">
+  <label id="app-theme-toggle" class="flex gap-2 swap swap-rotate text-nowrap p-1">
+    Update Theme
     <input
       v-model="isToggled"
       name="theme"
