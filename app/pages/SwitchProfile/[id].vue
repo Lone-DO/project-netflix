@@ -8,7 +8,7 @@ const $route = useRoute();
 const appStore = useAppStore();
 const requiresAuth = ref(false);
 const hasValidPinCode = ref(false);
-const debounce = ref<number | null>(null);
+const debounce = ref<NodeJS.Timeout | null>(null);
 const profile = computed(() => PROFILES.find(item => item.id === $route.params.id));
 
 onMounted(async () => {

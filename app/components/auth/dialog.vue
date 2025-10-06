@@ -34,7 +34,7 @@ function nextChild(element: HTMLInputElement, index: number) {
 
 <template>
   <AppDialog :is-open>
-    <section class="flex flex-col gap-4 text-center">
+    <section id="auth-dialog" class="flex flex-col gap-4 text-center">
       <h3 class="text-neutral-300">
         Profile Lock is currently on
       </h3>
