@@ -8,6 +8,7 @@ const initialValues = { 0: null, 1: null, 2: null, 3: null };
 async function onSubmit(data?: any) {
   const values = data as { 0: FieldValueType; 1: FieldValueType; 2: FieldValueType; 3: FieldValueType };
   const pin = Object.keys(values).reduce((set, key) => `${set}${values[key as keyof object]}`, '');
+  // eslint-disable-next-line no-console
   console.log({ values, data, pin });
 }
 

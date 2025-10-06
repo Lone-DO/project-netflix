@@ -4,7 +4,7 @@ definePageMeta({
 });
 const hasStarted = ref(false);
 const debounce = ref<number>();
-const transition = ref<number>();
+const transition = ref<NodeJS.Timeout | number>();
 const appStore = useAppStore();
 const playerStore = usePlayerStore();
 function start() {
