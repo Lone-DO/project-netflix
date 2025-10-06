@@ -3,7 +3,7 @@ import { NAVIGATION_ITEMS } from '~/lib/constants';
 </script>
 
 <template>
-  <nav>
+  <nav id="app-navigation">
     <AppDropdown
       :items="NAVIGATION_ITEMS"
       label="Browse"

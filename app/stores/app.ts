@@ -27,6 +27,7 @@ export const useAppStore = defineStore('appStore', () => {
   async function syncImageSource() {
     if (!profile.value?.icon) {
       imgSource.value = '';
+      return;
     }
     const src = await import(`@/assets/images/profile/${profile.value?.icon}.webp`);
     imgSource.value = src.default;

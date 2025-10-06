@@ -3,8 +3,8 @@ defineProps<{
   label?: string;
   name: string;
   error?: string;
-  maxlength: number;
-  pattern: string;
+  maxlength?: number;
+  pattern?: string;
   classes?: string;
   type?: 'number' | 'text' | 'textarea';
   disabled?: boolean;

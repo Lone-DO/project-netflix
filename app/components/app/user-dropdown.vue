@@ -7,7 +7,7 @@ const appStore = useAppStore();
 <template>
   <app-dropdown
     :items="USER_ITEMS"
-    class="dropdown-end"
+    class="app-user-dropdown dropdown-end"
     list-classes="p-0"
     open-by="hover"
   >

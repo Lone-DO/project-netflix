@@ -50,7 +50,7 @@ function close() {
   <!-- https://daisyui.com/components/dropdown/#dropdown-using-details-and-summary -->
   <details
     ref="dropdown"
-    class="dropdown"
+    class="app-dropdown dropdown"
     v-on="handlers"
   >
     <summary class="p-0 menu cursor-pointer" @mousedown="syncAttribute">

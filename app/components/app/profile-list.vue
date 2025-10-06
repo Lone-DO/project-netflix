@@ -31,7 +31,7 @@ const filtered = PROFILES.filter((profile) => {
 
 <template>
   <ClientOnly>
-    <ul :class="classes">
+    <ul id="app-profile-list" :class="classes">
       <li
         v-for="profile in (excludeCurrent ? filtered : PROFILES)"
         :key="profile.id"
