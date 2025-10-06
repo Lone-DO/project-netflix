@@ -8,7 +8,7 @@ const $route = useRoute();
 const appStore = useAppStore();
 const requiresAuth = ref(false);
 const hasValidPinCode = ref(false);
-const debounce = ref<NodeJS.Timeout | null>(null);
+const debounce = ref<NodeJS.Timeout | number>();
 const profile = computed(() => PROFILES.find(item => item.id === $route.params.id));
 
 onMounted(async () => {
@@ -22,6 +22,8 @@ onMounted(async () => {
   return proceed();
 });
 
+onUnmounted(() => clearTimeout(debounce.value));
+
 function reject() {
   if (hasValidPinCode.value) {
     return;
@@ -31,6 +33,7 @@ function reject() {
 }
 
 function proceed() {
+  clearTimeout(debounce.value);
   debounce.value = setTimeout(() => {
     appStore.profile = profile.value || null;
     navigateTo('/browse');
