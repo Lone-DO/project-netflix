@@ -30,6 +30,8 @@ jobs:
     env:
       NODE_ENV: development
     steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
       - run: pnpm test
 
   lint:
@@ -39,6 +41,8 @@ jobs:
     env:
       NODE_ENV: development
     steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
       - run: pnpm lint
 
   typecheck:
@@ -48,4 +52,6 @@ jobs:
     env:
       NODE_ENV: development
     steps:
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
       - run: pnpm typecheck
