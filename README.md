@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/34bd842b-8ae0-47a2-951a-39d8a8770ecf
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
