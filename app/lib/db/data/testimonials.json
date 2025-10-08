@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "linked_in": "https://www.linkedin.com/in/sashandlovu",
+    "date": "July 2, 2025",
+    "name": "Sasha (Ndlovu) Jiles",
+    "profile_image_src": "",
+    "review": "I worked with Shawn for more than 4 years. He is consistently diligent and takes pride in his work. \nShawn has also proven himself to be a great teammate that is thoughtful and considerate of his coworkers. \nI very much enjoyed working with Shawn and would highly recommend him for any future employment.",
+    "relationship": "worked together but on different teams",
+    "position": "Client Success Manager at Virtual Peaker",
+    "created_at": 1759929076344,
+    "updated_at": 1759929076344
+  },
+  {
+    "id": 2,
+    "linked_in": "https://www.linkedin.com/in/natalie-orner",
+    "date": "June 19 2025",
+    "name": "Natalie Orner",
+    "profile_image_src": "",
+    "review": "Highly recommend Dayshawn for his professionalism, courtesy, and attention to detail. During his time at Virtual Peaker, I appreciated his prompt updates to our joint tasks. I could trust him to follow through on any of our shared goals, and to communicate clearly as we navigated to completion.\n\nAs a coworker he brings a warmth and understanding to all of his professional relationships. I think any organization would be lucky to have him on their team.",
+    "relationship": "worked together but on different teams",
+    "position": "Solutions Engineer | Bridging Technology & Client Needs Through Strategic Solutions & Technical ExpertiseSolutions Engineer\t",
+    "created_at": 1759929207478,
+    "updated_at": 1759929207478
+  },
+  {
+    "id": 3,
+    "linked_in": "https://www.linkedin.com/in/sarah-betterton-a1035b222",
+    "date": "June 9, 2025",
+    "name": "Sarah Betterton",
+    "profile_image_src": "",
+    "review": "Shawn is an excellent coworker. He is very knowledgeable, skilled in his craft, and friendly. He has excellent communication skills, and is always ready to help.\n",
+    "relationship": "worked together but on different teams",
+    "position": "Software QA Engineer at Virtual Peaker",
+    "created_at": 1759929456268,
+    "updated_at": 1759929456268
+  },
+  {
+    "id": 4,
+    "linked_in": "https://www.linkedin.com/in/anabogdanova",
+    "date": "June 12, 2025",
+    "name": "Ana Bogdanova",
+    "profile_image_src": "",
+    "review": "I worked alongside Shawn at Virtual Peaker for 4 years during an exciting growth period where we scaled from around 13 employees to over 60. \n\nShawn has a great eye for detail and can explain technical concepts in a way that actually makes sense to the product and design teams. He led two major redesign projects that significantly improved our UX, and his feedback throughout both projects was invaluable.\n\nHe can balance strong technical execution with genuine collaboration. He's the kind of developer every PM hopes to work with - skilled, communicative, and always focused on the user experience. Highly recommend!I worked alongside Shawn at Virtual Peaker for 4 years during an exciting growth period where we scaled from around 13 employees to over 60. \n\nShawn has a great eye for detail and can explain technical concepts in a way that actually makes sense to the product and design teams. He led two major redesign projects that significantly improved our UX, and his feedback throughout both projects was invaluable.\n\nHe can balance strong technical execution with genuine collaboration. He's the kind of developer every PM hopes to work with - skilled, communicative, and always focused on the user experience. Highly recommend!",
+    "relationship": "worked together but on different teams",
+    "position": "Senior Product Manager at Virtual Peaker",
+    "created_at": 1759929456270,
+    "updated_at": 1759929456270
+  },
+  {
+    "id": 5,
+    "linked_in": "https://www.linkedin.com/in/darnellmckinney",
+    "date": "June 8, 2025",
+    "name": "Darnell McKinney",
+    "profile_image_src": "",
+    "review": "I had the pleasure of working alongside Dayshawn at Virtual Peaker, where I was part of the QA team and he worked as a developer. We collaborated closely on a bunch of different issues, and I was impressed by his technical skills, professionalism, and ability to communicate effectively across roles.\nHis experience, attention to detail, and commitment to delivering quality code made a noticeable impact on the team’s overall success.\nI’d gladly work with Dayshawn again and recommend him to any team looking for a dependable and skilled developer.",
+    "relationship": "worked together but on different teams",
+    "position": "Software QA Engineer at Virtual Peaker",
+    "created_at": 1759929615926,
+    "updated_at": 1759929615926
+  }
+]
