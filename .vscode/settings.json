@@ -51,9 +51,17 @@
   // tailwind plugin targeting
   "tailwindCSS.experimental.configFile": "./app/assets/css/main.css",
   "cSpell.words": [
+    "Betterton",
+    "Bogdanova",
+    "Jiles",
+    "libsql",
     "majesticons",
+    "Ndlovu",
     "nuxi",
     "Nuxt",
-    "nuxtjs"
+    "nuxtjs",
+    "Orner",
+    "tabler",
+    "turso"
   ]
 }
