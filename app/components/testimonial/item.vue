@@ -7,7 +7,7 @@ const appStore = useAppStore();
 </script>
 
 <template>
-  <article class="w-full">
+  <article class="testimonial-item w-full">
     <header class="flex gap-2 items-center flex-1/1 flex-wrap mb-2">
       <!-- <img :src="item.profileImageSrc || ''" :alt="item.name"> -->
       <Icon :name="appStore.icons.user" size="28" />
