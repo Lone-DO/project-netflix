@@ -14,7 +14,7 @@ const {
 });
 
 const isLoading = computed(() => status.value === 'pending');
-const skeletonItem = {} as testimonial;
+const skeletonItem = { date: '', relationship: '', company: '' } as testimonial & { company: string };
 </script>
 
 <template>
