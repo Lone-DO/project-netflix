@@ -26,6 +26,10 @@ const skeletonItem = {} as testimonial;
       <li v-if="isLoading" class="py-2">
         <TestimonialItem :item="skeletonItem" :loading="true" />
       </li>
+      <li v-if="!isLoading && !data?.length">
+        <p>No Testimonials Found</p>
+        <!-- TODO: Add Button/Form for users to Submit Reviews directly via website -->
+      </li>
       <template v-if="!isLoading">
         <li
           v-for="item in data"
