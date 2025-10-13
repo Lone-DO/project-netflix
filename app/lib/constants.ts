@@ -69,6 +69,7 @@ export const LIGHT_MODE_ICONS: Icons = {
   'chevron-down': 'majesticons:chevron-down-circle',
   'share': 'fluent:share-16-filled',
   'gear': 'majesticons:settings-cog',
+  'user': 'majesticons:user-circle',
 };
 export const DARK_MODE_ICONS: Icons = {
   'home': 'material-symbols:house-outline',
@@ -83,4 +84,5 @@ export const DARK_MODE_ICONS: Icons = {
   'chevron-down': 'majesticons:chevron-down-circle-line',
   'share': 'fluent:share-16-regular',
   'gear': 'majesticons:settings-cog-line',
+  'user': 'majesticons:user-circle-line',
 };
