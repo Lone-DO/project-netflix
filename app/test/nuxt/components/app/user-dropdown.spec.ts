@@ -8,7 +8,7 @@ describe('appUserDropdown', () => {
     const wrapper = await mountSuspended(Component);
     const appStore = useAppStore();
     expect(appStore.profile?.icon).toBe(undefined);
-    expect(appStore.imgSource).toBe('');
+    expect(appStore.imgSource).toBe(null);
     expect(wrapper.find('.app-user-dropdown').exists()).toBeTruthy();
   });
 });
