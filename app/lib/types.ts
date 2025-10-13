@@ -29,6 +29,7 @@ export type Icons = {
   'gear': string;
   'chevron-up': string;
   'chevron-down': string;
+  'user': string;
   // navToggle: {
   //   left: string;
   //   right: string;

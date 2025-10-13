@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import tryParseEnv from '../utils/try-parse-env';
+import { MOCK_ENV } from './constants';
 
 const EnvSchema = z.object({
   NODE_ENV: z.string(),
@@ -16,8 +17,7 @@ const EnvSchema = z.object({
 });
 
 export type EnvSchema = z.infer<typeof EnvSchema>;
-
-tryParseEnv(EnvSchema);
-
 // eslint-disable-next-line node/no-process-env
-export default EnvSchema.parse(process.env);
+tryParseEnv(EnvSchema, process.env.VITEST ? MOCK_ENV : undefined);
+// eslint-disable-next-line node/no-process-env
+export default EnvSchema.parse(process.env.VITEST ? MOCK_ENV : process.env);

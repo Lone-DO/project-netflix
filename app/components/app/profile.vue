@@ -11,13 +11,15 @@ const $props = defineProps<{
 
 const appStore = useAppStore();
 const isHovered = ref(false);
-let imgSrc;
-try {
-  imgSrc = $props.icon ? await import(`@/assets/images/profile/${$props.icon}.webp`) : '';
-}
-catch {
-  imgSrc = '';
-}
+let imgSrc = { default: '' };
+onMounted(async () => {
+  try {
+    imgSrc = await ($props.icon ? import(`@/assets/images/profile/${$props.icon}.webp`) : Promise.resolve(''));
+  }
+  catch {
+    imgSrc = { default: '' };
+  }
+});
 const to = computed<RouteLocationRaw>(() => ({
   name: 'SwitchProfile-id',
   params: {
