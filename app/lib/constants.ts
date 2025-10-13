@@ -1,4 +1,18 @@
+import type { EnvSchema } from './env';
 import type { DropdownItem, Icons, PROFILE } from './types';
+
+export const MOCK_ENV: EnvSchema = {
+  NODE_ENV: '',
+  // # TURSO
+  TURSO_DATABASE_URL: '',
+  TURSO_AUTH_TOKEN: '',
+  // # BETTER AUTH
+  BETTER_AUTH_SECRET: '',
+  BETTER_AUTH_URL: '',
+  // # GITHUB
+  AUTH_GITHUB_CLIENT_ID: '',
+  AUTH_GITHUB_CLIENT_SECRET: '',
+};
 
 export const PROFILES: PROFILE[] = [
   { id: 'recruiter', icon: '102', name: 'Recruiter' },
