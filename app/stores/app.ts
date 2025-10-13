@@ -42,7 +42,13 @@ export const useAppStore = defineStore('appStore', () => {
     }
   });
   onMounted(() => {
-    const cache = JSON.parse(localStorage.getItem('profile') || '{}');
+    let cache = null;
+    try {
+      cache = JSON.parse(localStorage.getItem('profile') || '') || null;
+    }
+    catch {
+      cache = null;
+    }
     if (cache) {
       profile.value = cache;
     }
@@ -57,6 +63,7 @@ export const useAppStore = defineStore('appStore', () => {
      * Called when user loads root `/` page
      */
     profile.value = null;
+    localStorage.removeItem('profile');
   }
   return {
     icons,
