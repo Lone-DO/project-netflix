@@ -22,7 +22,7 @@ const skeletonItem = { date: '', relationship: '', company: '' } as testimonial 
     <h1 class="text-2xl">
       Testimonials
     </h1>
-    <ul class="w-full">
+    <ul class="w-full flex flex-col gap-2">
       <li v-if="isLoading" class="py-2">
         <TestimonialItem :item="skeletonItem" :loading="true" />
       </li>
@@ -34,7 +34,7 @@ const skeletonItem = { date: '', relationship: '', company: '' } as testimonial 
         <li
           v-for="item in data"
           :key="item.id"
-          class="py-2"
+          class="py-2 lg:px-4 border-(--border-grey) not-last:border-b-2"
         >
           <TestimonialItem :item />
         </li>
