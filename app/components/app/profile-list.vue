@@ -30,15 +30,13 @@ const filtered = PROFILES.filter((profile) => {
 </script>
 
 <template>
-  <ClientOnly>
-    <ul id="app-profile-list" :class="classes">
-      <li
-        v-for="profile in (excludeCurrent ? filtered : PROFILES)"
-        :key="profile.id"
-        :class="listClasses"
-      >
-        <AppProfile v-bind="profile" :is-list />
-      </li>
-    </ul>
-  </ClientOnly>
+  <ul id="app-profile-list" :class="classes">
+    <li
+      v-for="profile in (excludeCurrent ? filtered : PROFILES)"
+      :key="profile.id"
+      :class="listClasses"
+    >
+      <LazyAppProfile v-bind="profile" :is-list />
+    </li>
+  </ul>
 </template>
