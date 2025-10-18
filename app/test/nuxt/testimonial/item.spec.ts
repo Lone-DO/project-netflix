@@ -11,7 +11,7 @@ const props = {
     date: '',
     id: 0,
     linkedIn: null,
-    profileImageSrc: null,
+    imageSrc: null,
     review: '',
     relationship: '',
     position: '',
