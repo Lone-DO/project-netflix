@@ -4,3 +4,7 @@
     light --default,
     dark --prefersdark;
 }
+
+@theme {
+  --border-grey: #404040;
+}

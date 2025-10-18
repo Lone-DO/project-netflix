@@ -5,7 +5,7 @@ export const testimonial = sqliteTable('testimonials', {
   linkedIn: text(),
   date: text().notNull(),
   name: text().notNull(),
-  profileImageSrc: text(),
+  imageSrc: text(),
   review: text().notNull(),
   relationship: text().notNull(),
   position: text().notNull(),
