@@ -5,6 +5,9 @@
     dark --prefersdark;
 }
 
+/** Tailwindcss Light Mode Modifier */
+@custom-variant light (html:not([data-theme="dark"]) &);
+
 @theme {
   --border-grey: #404040;
 }

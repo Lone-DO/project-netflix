@@ -33,8 +33,8 @@ const to = computed<RouteLocationRaw>(() => ({
 const classes = computed(() => {
   const base = 'app-profile flex min-w-21 items-center gap-2';
   const flow = $props.isList
-    ? 'justify-start text-white px-1'
-    : 'flex-col justify-center text-neutral-500 hover:text-white';
+    ? 'justify-start px-1'
+    : 'flex-col justify-center text-neutral-500';
   return [base, flow].join(' ');
 });
 const imgClasses = computed(() => {
@@ -72,7 +72,7 @@ const imgClasses = computed(() => {
         :alt="`${name} icon`"
         :class="imgClasses"
       >
-      <i class="text-xs" :class="isHovered ? 'text-white' : ''">{{ name }}</i>
+      <i class="text-xs" :class="isHovered ? 'dark:text-white light:text-base-content' : ''">{{ name }}</i>
       <Icon
         v-if="requiresAuth"
         name="majesticons:lock-line"

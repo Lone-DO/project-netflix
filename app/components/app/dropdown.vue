@@ -91,10 +91,9 @@ function close() {
           >
             <Icon
               :name="getIconName(item)"
-              class="text-(--btn-fg)"
               :size="item.size || '20'"
             />
-            <span class="text-(--btn-fg)">{{ item.label }}</span>
+            <span>{{ item.label }}</span>
           </NuxtLink>
         </li>
       </ul>
