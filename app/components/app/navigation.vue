@@ -9,10 +9,10 @@ import { NAVIGATION_ITEMS } from '~/lib/constants';
       label="Browse"
       class="sm:hidden"
     />
-    <ul class="hidden sm:flex flex-row flex-nowrap menu dropdown-content rounded-box z-1 p-0 gap-1 shadow-sm">
+    <ul class="hidden sm:flex flex-row flex-nowrap menu dropdown-content rounded-box z-1 p-0 gap-1">
       <li v-for="(item, index) in NAVIGATION_ITEMS" :key="index">
         <NuxtLink :to="item?.to" class="p-1">
-          <span class="text-(--btn-fg)">{{ item.label }}</span>
+          <span>{{ item.label }}</span>
         </NuxtLink>
       </li>
     </ul>
