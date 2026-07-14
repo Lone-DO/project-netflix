@@ -1,9 +1,12 @@
 <script lang='ts' setup>
 import { useAppStore } from '@/stores/app';
-/** TODO: OnMount, Logout of AppStore and redirect to /browse */
+/** On mount, logout of AppStore and redirect */
 const appStore = useAppStore();
-useRouter().replace('/');
-appStore.reset();
+
+onMounted(() => {
+  appStore.reset();
+  navigateTo('/browse', { replace: true });
+});
 </script>
 
 <template>
