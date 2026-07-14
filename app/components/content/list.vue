@@ -12,7 +12,7 @@ const items = [
       <h2 class="text-lg font-medium lg:text-2xl">
         Trending Now
       </h2>
-      <div class="content-grid__items flex gap overflow-x-auto overflow-y-hidden p-4">
+      <div class="content-grid__items flex overflow-x-auto overflow-y-hidden p-4">
         <ContentItem
           v-for="(item, index) in items"
           :key="index"
