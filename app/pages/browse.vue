@@ -5,7 +5,7 @@ const appStore = useAppStore();
 <template>
   <section
     v-if="appStore.isMounted && !appStore.profile"
-    id="login"
+    id="browse"
     class="w-full flex-1 flex flex-col items-center justify-center gap-4 text-center"
   >
     <!-- TODO: Add fallback element till app is ready -->
