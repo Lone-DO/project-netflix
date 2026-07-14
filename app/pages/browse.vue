@@ -3,7 +3,12 @@ const appStore = useAppStore();
 </script>
 
 <template>
-  <section id="browse" class="flex flex-col items-center justify-center gap-4 min-w-screen text-center">
+  <section
+    v-if="appStore.isMounted"
+    id="browse"
+    class="w-full flex-1"
+    :class="!appStore.profile ? 'flex flex-col items-center justify-center gap-4 text-center' : ''"
+  >
     <!-- TODO: Add fallback element till app is ready -->
     <template v-if="!appStore.profile">
       <h1 class="text-3xl">
