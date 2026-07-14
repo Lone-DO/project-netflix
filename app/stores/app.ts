@@ -68,6 +68,7 @@ export const useAppStore = defineStore('appStore', () => {
   return {
     icons,
     imgSource,
+    isMounted,
     profile,
     reset,
   };

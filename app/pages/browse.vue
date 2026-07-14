@@ -3,16 +3,18 @@ const appStore = useAppStore();
 </script>
 
 <template>
-  <section id="browse" class="flex flex-col items-center justify-center gap-4 min-w-screen text-center">
+  <section
+    v-if="appStore.isMounted && !appStore.profile"
+    id="browse"
+    class="w-full flex-1 flex flex-col items-center justify-center gap-4 text-center"
+  >
     <!-- TODO: Add fallback element till app is ready -->
-    <template v-if="!appStore.profile">
-      <h1 class="text-3xl">
-        Who's watching?
-      </h1>
-      <AppProfileList />
-    </template>
-    <AppContent v-else-if="appStore.profile" />
+    <h1 class="text-3xl">
+      Who's watching?
+    </h1>
+    <AppProfileList />
   </section>
+  <ContentList v-else-if="appStore.isMounted && appStore.profile" />
 </template>
 
 <style scoped>
